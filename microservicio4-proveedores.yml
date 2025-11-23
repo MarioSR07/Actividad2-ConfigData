@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:hsqldb:mem:proveedoresdb
+    url: jdbc:hsqldb:file:./data/proveedoresdb;shutdown=true;hsqldb.lock_file=false
     driver-class-name: org.hsqldb.jdbcDriver
     username: sa
     password:
@@ -16,9 +16,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
