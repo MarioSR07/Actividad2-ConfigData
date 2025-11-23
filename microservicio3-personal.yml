@@ -1,9 +1,9 @@
 server:
-  port: 8083
+  port: 8084
 
 spring:
   datasource:
-    url: jdbc:hsqldb:file:./data/personaldb;shutdown=true;hsqldb.lock_file=false
+    url: jdbc:hsqldb:file:./data/proveedoresdb;shutdown=true;hsqldb.lock_file=false
     driver-class-name: org.hsqldb.jdbcDriver
     username: sa
     password:
