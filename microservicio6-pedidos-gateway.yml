@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:hsqldb:mem:pedidosdb
+    url: jdbc:hsqldb:file:./data/pedidosdb;shutdown=true
     driver-class-name: org.hsqldb.jdbcDriver
     username: sa
     password:
@@ -16,9 +16,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
